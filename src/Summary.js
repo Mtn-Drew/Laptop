@@ -1,5 +1,5 @@
 import React from 'react'
-import Total from './Total'
+import SummaryOption from './SummaryOption'
 
 class Summary extends React.Component {
   render() {
@@ -18,18 +18,15 @@ class Summary extends React.Component {
     );
   });
 
-return (
-  <div>
-  <section className="main__summary">
-    <h2>Your cart</h2>
-    <div>{summary}</div>
-  </section>
-  <Total 
-  total={this.props.total}
-  USCurrencyFormat={this.props.USCurrencyFormat} 
-  />
-  </div>
-)
-}}
+  return (
+    <div>
+      <SummaryOption 
+        summary={summary}  
+        USCurrencyFormat={this.props.USCurrencyFormat} 
+        total={this.props.total}
+        />
+    </div>
+  )}
+}
 
 export default Summary
