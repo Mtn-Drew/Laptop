@@ -43,10 +43,10 @@ class App extends Component {
 
   render() {
     
-    const total = Object.keys(this.state.selected).reduce(
-      (acc, curr) => acc + this.state.selected[curr].cost,
-      0
-    );
+    // const total = Object.keys(this.state.selected).reduce(
+    //   (acc, curr) => acc + this.state.selected[curr].cost,
+    //   0
+    // );
 
     return (
       <div className="App">
@@ -61,7 +61,7 @@ class App extends Component {
         <Summary 
           selected={this.state.selected}
           USCurrencyFormat={USCurrencyFormat} 
-          total={total}
+          // total={total}
           />
         </main>
       </div>
